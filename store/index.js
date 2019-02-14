@@ -21,7 +21,6 @@ export const actions = {
       headers: { 'Authorization': `Token token=${API_KEY}`}
     })
     const quotes = response.quotes
-    console.log(quotes);
     commit('SET_QUOTES', quotes)
   }
 }

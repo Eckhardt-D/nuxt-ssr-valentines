@@ -11,7 +11,7 @@
           src="/ValeQuote.jpg" 
           alt="A Valentines Heart with Binary Data">
           <br>
-        <nuxt-link to="/quotes" class="quoteBtn">Get Random Love Quote</nuxt-link>
+        <nuxt-link to="/quotes" class="quoteBtn">Get List of Love Quotes</nuxt-link>
       </div>
     </main>
   </section>
@@ -20,7 +20,31 @@
 <script>
 
 export default {
-
+  head() {
+    return {
+      title: 'Valentines Quotes ❤️',
+      meta: [
+        { name: "description", content: "Find cool valentines quotes to send to your number one person. ❤️"  },
+        { name: "shortcut icon", content: "❤️"  },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:site", content: "@eckhardtdreyer" },
+        { name: "twitter:title", content: "Valentines Quotes ❤️" },
+        { name: "twitter:description", content: "Find cool valentines quotes to send to your number one person. ❤️" },
+        { name: "twitter:creator", content: "@eckhardtdreyer" },
+        { name: "twitter:image", content: "https://valentines-quotes-fertdtvfya.now.sh/socials.jpg" },
+        { property: "og:title", content: "Valentines Quotes ❤️"  },
+        { property: "og:type", content: "website"  },
+        { property: "og:url", content: "https://valentines-quotes-fertdtvfya.now.sh"  },
+        { property: "og:image", content: "https://valentines-quotes-fertdtvfya.now.sh/socials.jpg"  },
+        { property: "og:image:secure_url", content: "https://valentines-quotes-fertdtvfya.now.sh/socials.jpg"  },
+        { property: "og:description", content: "Find cool valentines quotes to send to your number one person. ❤️"  }, 
+        { property: "og:site_name", content: "Valentines Quotes ❤️"  },
+      ],
+      link: [
+        { rel: "shorcut icon", href: "https://valentines-quotes-fertdtvfya.now.sh/favicon.png" }
+      ]
+    }
+  }
 }
 </script>
 
@@ -46,6 +70,7 @@ export default {
   }
 
   main {
+    margin-top: 56px;
     min-height: calc(100vh - 56px);
     display: flex;
     align-items: center;
@@ -80,6 +105,12 @@ export default {
     border-radius: 10px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     transition: all 100ms ease-in-out;
+  }
+
+  @media screen and (min-width: 768px) {
+    main div img {
+      width: 50%;
+    }
   }
 </style>
 

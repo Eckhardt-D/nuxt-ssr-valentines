@@ -20,7 +20,27 @@ export default {
   },
   head() {
     return {
-      title: this.quote.author + ' | ' + this.quote.body.substring(0, 25) + '...'
+      title: 'Valentines Quotes ❤️',
+      meta: [
+        { name: "description", content: this.quote.body + ' - ' + this.quote.author },
+        { name: "shortcut icon", content: "❤️"  },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:site", content: "@eckhardtdreyer" },
+        { name: "twitter:title", content: "Valentines Quotes ❤️" },
+        { name: "twitter:description", content: this.quote.body + ' - ' + this.quote.author },
+        { name: "twitter:creator", content: "@eckhardtdreyer" },
+        { name: "twitter:image", content: "https://valentines-quotes-fertdtvfya.now.sh/socials.jpg" },
+        { property: "og:title", content: "Valentines Quotes ❤️"  },
+        { property: "og:type", content: "website"  },
+        { property: "og:url", content: "https://valentines-quotes-fertdtvfya.now.sh/quotes/"+this.quote.id  },
+        { property: "og:image", content: "https://valentines-quotes-fertdtvfya.now.sh/socials.jpg"  },
+        { property: "og:image:secure_url", content: "https://valentines-quotes-fertdtvfya.now.sh/socials.jpg"  },
+        { property: "og:description", content: this.quote.body + ' - ' + this.quote.author  }, 
+        { property: "og:site_name", content: "Valentines Quotes ❤️"  },
+      ],
+      link: [
+        { rel: "shorcut icon", href: "https://valentines-quotes-fertdtvfya.now.sh/favicon.png" }
+      ]
     }
   }
 }
